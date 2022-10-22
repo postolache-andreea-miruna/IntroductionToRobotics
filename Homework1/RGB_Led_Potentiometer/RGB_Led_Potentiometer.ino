@@ -22,7 +22,6 @@ int ledBlueValue;
 int ledGreenValue;
 
 void setup(){
-
   pinMode(signalRedPin, INPUT);
   pinMode(signalBluePin, INPUT);
   pinMode(signalGreenPin, INPUT);
