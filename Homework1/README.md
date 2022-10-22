@@ -10,6 +10,7 @@ Used components:
  - 3 resistors and 17 wires
 
 ## Setup
+<img src="D:/robotica/Homework1/Setup.jpg" alt="Setup" title="Setup">
 
 ## Let's see how it works
 
