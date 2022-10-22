@@ -10,7 +10,7 @@ Used components:
  - 3 resistors and 17 wires
 
 ## Setup
-![](D:/robotica/Homework1/Setup.jpg)
+![Setup](Homework1/Setup.jpg)
 
 ## Let's see how it works
 
