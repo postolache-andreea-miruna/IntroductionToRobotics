@@ -10,7 +10,8 @@ Used components:
  - 3 resistors and 17 wires
 
 ## Setup
-![Setup](Homework1/Setup.jpg)
+
+![Setup](https://github.com/postolache-andreea-miruna/IntroductionToRobotics/blob/333017c53a9c7fa7af235ab9baec465b37b3f140/Homework1/Setup.jpg)
 
 ## Let's see how it works
 
