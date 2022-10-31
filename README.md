@@ -1,7 +1,11 @@
 # Introduction To Robotics (2022-2023)
 Programs in Arduino  written for Unibuc FMI course: Introduction to robotics.
 
-## When possible, follow the wires color scheme:
+## [✪ Homework 1 ✪](https://github.com/postolache-andreea-miruna/IntroductionToRobotics/tree/main/Homework1)
+
+## [🌠 Homework 2 🌠](https://github.com/postolache-andreea-miruna/IntroductionToRobotics/tree/main/Homework2)
+
+### When possible, follow the wires color scheme:
 
 -BLACK for GND (dark colors if not available)
 
