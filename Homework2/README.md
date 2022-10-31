@@ -42,7 +42,7 @@ Used components:
 
 ## Setup
 
-![Setup](https://github.com/postolache-andreea-miruna/IntroductionToRobotics/blob/47f4a501071abaf0c3ecf2d58ee57023520f7eaa/Homework2/Semafoarele.jpg)
+![Setup](https://github.com/postolache-andreea-miruna/IntroductionToRobotics/blob/f1b8480a2f143dadddc08c584751ca1d77802894/Homework2/Semafoarele.jpg)
 
 ## Let's see how it works
 
