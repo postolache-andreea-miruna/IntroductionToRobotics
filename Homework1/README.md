@@ -1,8 +1,8 @@
-# Homework 1
+# 🌟 Homework 1 🌟
 
 ## Task Requirements
-Control each of the color red, green, blue of the RGB led with a separat potentiometer.
-You must done the control with digital electronics.
+Controlling each of the color red, green, blue of the RGB led with a separat potentiometer.
+I done the control with digital electronics.
 
 Used components:
  - 1 RGB led (commun cathod)
@@ -11,7 +11,7 @@ Used components:
 
 ## Setup
 
-![Setup](https://github.com/postolache-andreea-miruna/IntroductionToRobotics/blob/333017c53a9c7fa7af235ab9baec465b37b3f140/Homework1/Setup.jpg)
+![Setup](https://github.com/postolache-andreea-miruna/IntroductionToRobotics/blob/4768a2a19db415768249b440ecff7edc64c671e7/Homework1/Setup1.jpg)
 
 ## Let's see how it works
 
