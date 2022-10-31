@@ -42,11 +42,12 @@ Used components:
 
 ## Setup
 
-![Setup](https://github.com/postolache-andreea-miruna/IntroductionToRobotics/blob/47f4a501071abaf0c3ecf2d58ee57023520f7eaa/Homework2/Semafoare.jpg = 100x20))
+![Setup](https://github.com/postolache-andreea-miruna/IntroductionToRobotics/blob/47f4a501071abaf0c3ecf2d58ee57023520f7eaa/Homework2/Semafoare.jpg = 100x20)
 
 ## Let's see how it works
 
 [Demo for one button press](https://youtu.be/jeSTIqOnYK0)
 
 [Demo for multiple button press](https://youtu.be/TSNSQOE1npg)
+
 🔼 In this demo I press the button multiple times to show that if the system is not in state 1 then nothing is happening
