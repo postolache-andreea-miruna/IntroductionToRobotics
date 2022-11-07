@@ -30,7 +30,7 @@ Used components:
 ## Setup
 
 
-![Setup](/Homework3/schem.jpg)
+![Setup](Homework3/schem.jpeg)
 
 
 ## Let's see how it works
