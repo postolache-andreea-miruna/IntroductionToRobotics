@@ -5,6 +5,9 @@ Programs in Arduino  written for Unibuc FMI course: Introduction to robotics.
 
 ## [🌠 Homework 2 🌠](https://github.com/postolache-andreea-miruna/IntroductionToRobotics/tree/main/Homework2)
 
+## [⭐ Homework 3 ⭐](https://github.com/postolache-andreea-miruna/IntroductionToRobotics/tree/main/Homework3)
+
+
 ### When possible, follow the wires color scheme:
 
 -BLACK for GND (dark colors if not available)
