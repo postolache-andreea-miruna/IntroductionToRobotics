@@ -30,7 +30,7 @@ Used components:
 ## Setup
 
 
-![Setup](https://github.com/postolache-andreea-miruna/IntroductionToRobotics/blob/40001f937fbe18cd1813284d3ea2040b922ad222/Homework3/schem1.jpeg)
+![Setup](https://github.com/postolache-andreea-miruna/IntroductionToRobotics/blob/e48ef90924974020c754049afdcf2959714ff948/Homework3/scheme.jpeg)
 
 
 ## Let's see how it works
