@@ -35,7 +35,7 @@ Used components:
 ## Setup
 
 
-![Setup](https://github.com/postolache-andreea-miruna/IntroductionToRobotics/blob/e48ef90924974020c754049afdcf2959714ff948/Homework3/scheme.jpeg)
+<img src="https://github.com/postolache-andreea-miruna/IntroductionToRobotics/blob/180a5a61f63493c2d147fda70628b8bf414e1cd8/Homework4/shema1.jpg" width=50% height=50%>
 
 
 ## Let's see how it works
