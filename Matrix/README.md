@@ -1,6 +1,6 @@
 # Matrix Step by step
 
-## [First Task] (https://github.com/postolache-andreea-miruna/IntroductionToRobotics/tree/main/Matrix/firstTask)
+## [First Task](https://github.com/postolache-andreea-miruna/IntroductionToRobotics/tree/main/Matrix/firstTask)
 
 ## 🔌 Setup
 
