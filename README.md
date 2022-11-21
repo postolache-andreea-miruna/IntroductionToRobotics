@@ -9,7 +9,7 @@ Programs in Arduino  written for Unibuc FMI course: Introduction to robotics.
 
 ## [✪ Homework 4 ✪](https://github.com/postolache-andreea-miruna/IntroductionToRobotics/tree/main/Homework4)
 
-
+## [🌠 Matrix 🌠](https://github.com/postolache-andreea-miruna/IntroductionToRobotics/tree/main/Matrix)
 
 ### When possible, follow the wires color scheme:
 
