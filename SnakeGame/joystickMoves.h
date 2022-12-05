@@ -15,7 +15,10 @@ bool startGame = false;
 bool joystickUp() {
   xValue = analogRead(pinX);
   if (xValue > maxThreshold) {
-    Serial.println("up");
+    //if (startGame == false){
+      Serial.println("up");
+    //}
+   
     return true;
   }
   else if (xValue < minThreshold || (xValue <= maxThreshold && xValue >= minThreshold)) {

@@ -14,17 +14,17 @@ bool state1Setting = false;  //settings with 5 SettingsParts
 bool state2Setting = false;  //menu for Parts of the settings
 
 //contrast lcd
-const int totalContrastValues = 4;
+const byte totalContrastValues = 4;
 int const lcdContrastValue[totalContrastValues] = {5, 10, 30, 50};
 int contrastPosition = 0;
-const int firstContrastPosition = 0;
-const int lastContrastPosition = 3;
+const byte firstContrastPosition = 0;
+const byte lastContrastPosition = 3;
 //brightness lcd
-const int totalBrightnessValues = 4;
+const byte totalBrightnessValues = 4;
 int const lcdBrightnessValue[totalBrightnessValues] = {200, 350, 450, 500};
 int brightnessPosition = 0;
-const int firstBrightnessPosition = 0;
-const int lastBrightnessPosition = 3;
+const byte firstBrightnessPosition = 0;
+const byte lastBrightnessPosition = 3;
 
 //brightness matrix
 const int totalBrightnessMatrixValues = 4;
@@ -50,23 +50,23 @@ void settingPart() {
   lcd.setCursor(14, 1);
   if (settingPartPosition == 0) {
     lcd.write(byte(4));
-    matrixMessage(setting);
+    //matrixMessage(setting);
   } 
   else if (settingPartPosition == 1) {
     lcd.write(byte(3));
-    matrixMessage(setting2);
+   // matrixMessage(setting2);
   } 
   else if (settingPartPosition == 2) {
     lcd.write(byte(3));
-    matrixMessage(setting3);
+   // matrixMessage(setting3);
   } 
   else if (settingPartPosition == 3) {
     lcd.write(byte(3));
-    matrixMessage(setting4);
+   // matrixMessage(setting4);
   } 
   else if (settingPartPosition == 4) {
     lcd.write(byte(3));
-    matrixMessage(setting);
+   // matrixMessage(setting);
   }
   else if (settingPartPosition == 5) {
     lcd.clear();
@@ -78,7 +78,7 @@ void settingPart() {
     lcd.print(settingsParts[settingPartPosition]);
     lcd.setCursor(14,1);
     lcd.write(byte(5));
-    matrixMessage(setting);
+   // matrixMessage(setting);
     
   }
   

@@ -125,13 +125,18 @@ if (millis() - lastBlink > blinkInterval) {
 }
 
 if (currentPosX == xPos && currentPosY == yPos) {
+  
+  if (score == 10) {
+    //////////////////////////////
+    congratsScreen(score);                               //congrats screen
+  }
+  else {
   score++;
   scorePrint(score);
-  // if (score == 10) {
-  //   congratsScreen(score);                               //congrats screen
-  // }
- // Serial.println(score);
   generateFood();
+  }
+ // Serial.println(score);
+ 
 }
 
 if (matrixChanged == true) {

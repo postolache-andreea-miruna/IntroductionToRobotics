@@ -113,7 +113,7 @@ void greeting()
 
 void nameOfThePlayer(int namePos) {
   String name = readFromEEPROM(namePos);
-  Serial.println(name);
+  //Serial.println(name.length());
   for(int pos = 0; pos < 4; pos++) {
     lcd.print(name[pos]);
   
@@ -132,15 +132,22 @@ void scorePrint(int score) {
 
 void placeNamePlayer() {
   lcd.setCursor(0,1);
-  lcd.print("NAME: ");
+  lcd.print("NAME:           ");
+  delay(1500);
+  //placeName = true;
 }
 void printNamePlayer(String name) {
   lcd.setCursor(6,1);
   lcd.print(name);
 }
+void goToMenu() {
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("Go to menu");
+}
 
 void congratsScreen(int score) {
-  //startGame = false;        //the game was end
+
   lcd.clear();
   lcd.setCursor(0,0);
   lcd.print("Congratulation!");
@@ -159,6 +166,8 @@ void congratsScreen(int score) {
   lcd.print("Your score ");
   lcd.print(score);
   matrixMessage(smile);
+
+  delay(1500);
 
   if (score > EEPROM.read(4)) {
     writePlayerName = true;

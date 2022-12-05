@@ -9,9 +9,9 @@
 #include "gameLogic.h"
 
 void setup() {
-// initialize();
+ initialize();
 
-  int sounds = EEPROM.read(3);
+  byte sounds = EEPROM.read(3);
   pinMode(pinSw, INPUT_PULLUP);
   if (sounds == 1) {
     sound = true;
@@ -59,4 +59,5 @@ void setup() {
 void loop() {
   gameStates();
   //Serial.println(settingPartPosition);
+
 }

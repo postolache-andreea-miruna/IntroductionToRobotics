@@ -24,6 +24,7 @@ void updateLength(int len) {
 }
 String readFromEEPROM(int addressOffset) {  //give the string at the indicate address
   int len = EEPROM.read(addressOffset);     //take the len value
+
   char name[len+1]={};
   byte begin;
   if (addressOffset == 9) {
@@ -46,8 +47,23 @@ String readFromEEPROM(int addressOffset) {  //give the string at the indicate ad
   for (int pos = 0; pos < len; pos++) {
     name[pos] = char(EEPROM.read(begin + pos));
   }
- // Serial.println(name);
-  return name;
+ name[len+1] = '\0';
+  String namePlayer = name;
+  Serial.println(namePlayer.length());
+
+
+  return namePlayer;
+//return (String)name;
+
+// if ( !malloc(5) )
+//     Serial.println("N-avem heap");
+// else
+//    Serial.println(" E ok");
+// char* cstr = "xxxx";
+// String str = cstr;
+// Serial.println(str.length());
+// return str;
+
 }
 void updateHighScoreEEPROM(int points) {
   EEPROM.update(8, EEPROM.read(7));

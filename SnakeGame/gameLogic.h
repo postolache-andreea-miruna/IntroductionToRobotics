@@ -30,12 +30,14 @@ void gameStates() {
     }
   }
   else {
-    // if (millis() - previousMillis2 > 300) {
-    //   if (writePlayerName == true) {
-    //     scrollPlayer();
-    //   }
-    // }
-    setupGame();
+    if (writePlayerName == true) {
+      if (millis() - previousMillis > 300) {
+        scrollPlayer();
+        previousMillis = millis();
+      }
+    }
+    else
+      setupGame();
    
       // if (millis() - previousMillis2 > 300) {
       //   if (joystickPress()) {

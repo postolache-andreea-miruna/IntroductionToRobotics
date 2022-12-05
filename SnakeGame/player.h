@@ -9,8 +9,6 @@ const int firstCharacterPosition = 0;
 const int lastCharacterPosition = characters.length() - 1;
 
 
-
-
 void scrollPlayer() {
 
   placeNamePlayer();
@@ -19,12 +17,16 @@ void scrollPlayer() {
     if (characterPosition < firstCharacterPosition) {
       characterPosition = firstCharacterPosition;
     }
+    namePl[namePosition] = characters[characterPosition];
+  printNamePlayer(namePl);
   }
   else if (joystickDown()) {
     characterPosition ++;
     if (characterPosition > lastCharacterPosition) {
       characterPosition = lastCharacterPosition;
     }
+    namePl[namePosition] = characters[characterPosition];
+  printNamePlayer(namePl);
   }
 
   else if (joystickRight()) {
@@ -32,19 +34,23 @@ void scrollPlayer() {
     if (namePosition > lastNamePosition) {
       namePosition = lastNamePosition;
     }
+    namePl[namePosition] = characters[characterPosition];
+  printNamePlayer(namePl);
   }
   else if (joystickLeft()) {
     namePosition --;
     if (namePosition > firstNamePosition) {
       namePosition = firstNamePosition;
     }
+    namePl[namePosition] = characters[characterPosition];
+  printNamePlayer(namePl);
   }
 
   else if (joystickPress()) {
     newHighScore(score,namePl);
     writePlayerName = false;
+    goToMenu();//in lcd
    }
 
-  namePl[namePosition] = characters[characterPosition];
-  printNamePlayer(namePl);
+  
 }

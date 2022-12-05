@@ -91,7 +91,7 @@ void highScoreMenu() {
     // lcd.print(char(EEPROM.read(17)));
     nameOfThePlayer(9);
 
-     lcd.setCursor(10, 1);
+    lcd.setCursor(10, 1);
     scoreOfThePlayer(4);
   }
 
@@ -100,11 +100,11 @@ void highScoreMenu() {
     lcd.print(person + 1);
     lcd.setCursor(3, 1);
 
-    lcd.print(char(EEPROM.read(18)));
-    lcd.print(char(EEPROM.read(19)));
-    lcd.print(char(EEPROM.read(20)));
-    lcd.print(char(EEPROM.read(21)));
-    //nameOfThePlayer(10);
+    // lcd.print(char(EEPROM.read(18)));
+    // lcd.print(char(EEPROM.read(19)));
+    // lcd.print(char(EEPROM.read(20)));
+    // lcd.print(char(EEPROM.read(21)));
+    nameOfThePlayer(10);
     lcd.setCursor(10, 1);
     scoreOfThePlayer(5);
     matrixMessage(game);
@@ -284,7 +284,6 @@ void menuCommandsSwitch() {
 /////////////////////////////////
 
 void scrollMenu() {
-
   if (joystickUp() && state2Menu == false){//&& state2Menu == false && state1Setting == false && state2Setting == false) {
     menuPartPosition--;
     if (firstMenuPosition > menuPartPosition) {
