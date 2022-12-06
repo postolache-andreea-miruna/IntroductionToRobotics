@@ -5,8 +5,8 @@ const int pinSw = 2;
 int xValue = 0;
 int yValue = 0;
 
-const int minThreshold = 400;
-const int maxThreshold = 700;
+const int minThreshold = 100;//400 --100
+const int maxThreshold = 900;//700 --900
 
 byte reading = HIGH;
 
@@ -15,15 +15,12 @@ bool startGame = false;
 bool joystickUp() {
   xValue = analogRead(pinX);
   if (xValue > maxThreshold) {
-    //if (startGame == false){
       Serial.println("up");
-    //}
-   
     return true;
   }
-  else if (xValue < minThreshold || (xValue <= maxThreshold && xValue >= minThreshold)) {
+  else// if (xValue < minThreshold || (xValue <= maxThreshold && xValue >= minThreshold)) {
     return false;
-  }
+  //}
 }
 
 
@@ -32,12 +29,10 @@ bool joystickDown() {
   if (xValue < minThreshold ) {
     Serial.println("down");
     return true;
-
   }
-  else if ( xValue > maxThreshold || (xValue <= maxThreshold && xValue >= minThreshold))
-  {
+  else // if ( xValue > maxThreshold || (xValue <= maxThreshold && xValue >= minThreshold))
     return false;
-  }
+  
 }
 
 
@@ -47,10 +42,8 @@ bool joystickLeft() {
    Serial.println("left");
     return true;
   }
-  else if ( yValue > maxThreshold || (yValue <= maxThreshold && yValue >= minThreshold))
-  {
+  else  //if ( yValue > maxThreshold || (yValue <= maxThreshold && yValue >= minThreshold))
     return false;
-  }
 }
 
 bool joystickRight() {
@@ -59,9 +52,8 @@ bool joystickRight() {
     Serial.println("right");
     return true;
   }
-  else if (yValue < minThreshold || (yValue <= maxThreshold && yValue >= minThreshold)) {
+  else //if (yValue < minThreshold || (yValue <= maxThreshold && yValue >= minThreshold)) {
     return false;
-  }
 }
 
 bool joystickPress() {
@@ -71,8 +63,7 @@ bool joystickPress() {
     Serial.println("preeeeesss");
     return true;
   } 
-  else {
+  else 
     return false;
-  }
 }
 

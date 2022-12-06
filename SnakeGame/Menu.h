@@ -33,25 +33,27 @@ void menuPart() {  //menu with 5 menuParts
   if (menuPartPosition == 0) {
     lcd.write(byte(4));
     matrixMessage(game);
-  } else if (menuPartPosition == 1) {
+  } 
+  else if (menuPartPosition == 1) {
     lcd.write(byte(3));
     matrixMessage(crown);
-  } else if (menuPartPosition == 2) {
+  } 
+  else if (menuPartPosition == 2) {
     lcd.write(byte(3));
     matrixMessage(setting);
-  } else if (menuPartPosition == 3) {
+  } 
+  else if (menuPartPosition == 3) {
     lcd.write(byte(3));
     matrixMessage(about);
-  } else if (menuPartPosition == 4) {
+  } 
+  else if (menuPartPosition == 4) {
     lcd.write(byte(5));
     matrixMessage(howToPlay);
   }
 }
 
-
-//////////////////////////////
-void startGameMenu() {                       //startGame = true !
-  lcd.clear();                                
+void startGameMenu() {  //startGame is true 
+  lcd.clear();
   lcd.setCursor(4, 0);
   lcd.print("START GAME");
   matrixMessage(howToPlay);
@@ -61,17 +63,16 @@ void startGameMenu() {                       //startGame = true !
 
 void startPlayGame() {
   lcd.clear();
-  lcd.setCursor(0,0);
+  lcd.setCursor(0, 0);
   lcd.print("SCORE ");
   lcd.print(0);
-  lcd.setCursor(10,0);
+  lcd.setCursor(10, 0);
   lcd.print("HS ");
   lcd.print(EEPROM.read(4));
 
-  lcd.setCursor(0,1);
+  lcd.setCursor(0, 1);
   lcd.print("LEVEL ");
   lcd.print(difficulty[EEPROM.read(34)]);
-
 }
 
 void highScoreMenu() {
@@ -83,82 +84,60 @@ void highScoreMenu() {
   if (person == 0) {
     lcd.setCursor(1, 1);
     lcd.print(person + 1);
-   
+
     lcd.setCursor(3, 1);
-    // lcd.print(char(EEPROM.read(14)));
-    // lcd.print(char(EEPROM.read(15)));
-    // lcd.print(char(EEPROM.read(16)));
-    // lcd.print(char(EEPROM.read(17)));
     nameOfThePlayer(9);
 
     lcd.setCursor(10, 1);
     scoreOfThePlayer(4);
   }
-
   else if (person == 1) {
     lcd.setCursor(1, 1);
     lcd.print(person + 1);
-    lcd.setCursor(3, 1);
 
-    // lcd.print(char(EEPROM.read(18)));
-    // lcd.print(char(EEPROM.read(19)));
-    // lcd.print(char(EEPROM.read(20)));
-    // lcd.print(char(EEPROM.read(21)));
+    lcd.setCursor(3, 1);
     nameOfThePlayer(10);
+
     lcd.setCursor(10, 1);
     scoreOfThePlayer(5);
-    matrixMessage(game);
   }
-
   else if (person == 2) {
     lcd.setCursor(1, 1);
     lcd.print(person + 1);
-    lcd.setCursor(3, 1);
-    //nameOfThePlayer(11);
 
-    lcd.print(char(EEPROM.read(22)));
-    lcd.print(char(EEPROM.read(23)));
-    lcd.print(char(EEPROM.read(24)));
-    lcd.print(char(EEPROM.read(25)));
+    lcd.setCursor(3, 1);
+    nameOfThePlayer(11);
+
     lcd.setCursor(10, 1);
     scoreOfThePlayer(6);
   }
-
- else  if (person == 3) {
+  else if (person == 3) {
     lcd.setCursor(1, 1);
     lcd.print(person + 1);
-    lcd.setCursor(3, 1);
 
-    lcd.print(char(EEPROM.read(26)));
-    lcd.print(char(EEPROM.read(27)));
-    lcd.print(char(EEPROM.read(28)));
-    lcd.print(char(EEPROM.read(29)));
-  //  nameOfThePlayer(12);
+    lcd.setCursor(3, 1);
+    nameOfThePlayer(12);
+
     lcd.setCursor(10, 1);
     scoreOfThePlayer(7);
   }
-
   else if (person == 4) {
     lcd.setCursor(1, 1);
     lcd.print(person + 1);
-    lcd.setCursor(3, 1);
 
-    lcd.print(char(EEPROM.read(30)));
-    lcd.print(char(EEPROM.read(31)));
-    lcd.print(char(EEPROM.read(32)));
-    lcd.print(char(EEPROM.read(33)));
-   // nameOfThePlayer(13);
+    lcd.setCursor(3, 1);
+    nameOfThePlayer(13);
+
     lcd.setCursor(10, 1);
     scoreOfThePlayer(8);
 
-  }
+  } 
   else if (person == 5) {
     lcd.clear();
     lcd.setCursor(0, 0);
     lcd.print("< EXIT <");
   }
 }
-
 
 void scrollHighScoreMenu() {
   highScoreMenu();
@@ -176,12 +155,11 @@ void scrollHighScoreMenu() {
 
     if (lastPerson < person) { person = lastPerson; }
     highScoreMenu();
-  }
+  } 
   else if (joystickLeft() && state2Menu == true && person == 5) {
     person = 0;
     menuPart();
   }
- 
 }
 
 void aboutMenu() {
@@ -194,8 +172,7 @@ void aboutMenu() {
     lcd.setCursor(15, 1);
     lcd.write(byte(4));
   }
-     
-  if (details == 1){
+  else if (details == 1) {
     lcd.setCursor(0, 0);
     lcd.print("BY: POSTOLACHE");
     lcd.setCursor(0, 1);
@@ -203,7 +180,7 @@ void aboutMenu() {
     lcd.setCursor(15, 1);
     lcd.write(byte(3));
   }
-  if (details == 2){
+  else if (details == 2) {
     lcd.setCursor(0, 0);
     lcd.print("GIT: postolache-");
     lcd.setCursor(0, 1);
@@ -211,7 +188,7 @@ void aboutMenu() {
     lcd.setCursor(15, 1);
     lcd.write(byte(4));
   }
-    if (details == 3){
+  else if (details == 3) {
     lcd.setCursor(0, 0);
     lcd.print("< EXIT <");
   }
@@ -237,7 +214,6 @@ void scrollAboutMenu() {
     details = 0;
     menuPart();
   }
-
 }
 
 void howToPlayMenu() {
@@ -246,8 +222,7 @@ void howToPlayMenu() {
   lcd.print(" SNAKE GAME IDEA   SNAKE GAME IDEA");
   lcd.setCursor(0, 1);
   lcd.print("The snake must eat as much as possible.");
-  for(int pos = 0; pos < 23; pos++)
-  {
+  for (int pos = 0; pos < 23; pos++) {
     lcd.scrollDisplayLeft();
     delay(500);
   }
@@ -260,7 +235,6 @@ void howToPlayMenu() {
   lcd.setCursor(5, 1);
   lcd.print("< EXIT <");
 }
-////////////////////////////
 
 void menuCommandsSwitch() {
   state1Menu = false;
@@ -268,41 +242,43 @@ void menuCommandsSwitch() {
   if (menuPartPosition == 0) {
     startGameMenu();
     startPlayGame();
-  } else if (menuPartPosition == 1) {
+  } 
+  else if (menuPartPosition == 1) {
     scrollHighScoreMenu();
-  } else if (menuPartPosition == 2) {
+  } 
+  else if (menuPartPosition == 2) {
     state1Menu = false;
     state2Menu = false;
-    settingPart();                      ////////////modif din settingPart()
-  } else if (menuPartPosition == 3) {
+    settingPart();
+  } 
+  else if (menuPartPosition == 3) {
     scrollAboutMenu();
-  } else if (menuPartPosition == 4) {
+  } 
+  else if (menuPartPosition == 4) {
     howToPlayMenu();
   }
 }
 
-/////////////////////////////////
-
 void scrollMenu() {
-  if (joystickUp() && state2Menu == false){//&& state2Menu == false && state1Setting == false && state2Setting == false) {
+  if (joystickUp() && state2Menu == false) {  //&& state2Menu == false && state1Setting == false && state2Setting == false) {
     menuPartPosition--;
     if (firstMenuPosition > menuPartPosition) {
       menuPartPosition = firstMenuPosition;
     }
     menuPart();
-  } else if (joystickDown() && state2Menu == false){// && state2Menu == false && state1Setting == false && state2Setting == false) {
+  } 
+  else if (joystickDown() && state2Menu == false) {  // && state2Menu == false && state1Setting == false && state2Setting == false) {
 
     menuPartPosition++;
 
     if (lastMenuPosition < menuPartPosition) { menuPartPosition = lastMenuPosition; }
 
     menuPart();
-  } else if (joystickRight() && state1Menu == true){// && state1Setting == false && state2Setting == false) {
+  } 
+  else if (joystickRight() && state1Menu == true) {  // && state1Setting == false && state2Setting == false) {
     menuCommandsSwitch();
-  } else if (joystickLeft() && state2Menu == true){// && state1Setting == false && state2Setting == false) {
+  } 
+  else if (joystickLeft() && state2Menu == true) {  // && state1Setting == false && state2Setting == false) {
     menuPart();
   }
 }
-//////////////////////////////////
-
-

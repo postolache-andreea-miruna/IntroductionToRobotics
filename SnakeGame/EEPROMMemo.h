@@ -15,13 +15,6 @@ LEVEL  of difficulty - 34
 
 const byte fisrtLetterPl1 = 14;
 
-void updateLength(int len) {
-  EEPROM.update(9, 4);   //mereu au cate 4 caractere
-  EEPROM.update(10, 4);  //mereu au cate 4 caractere
-  EEPROM.update(11, 4);  //mereu au cate 4 caractere
-  EEPROM.update(12, 4);
-  EEPROM.update(13, 4);
-}
 String readFromEEPROM(int addressOffset) {  //give the string at the indicate address
   int len = EEPROM.read(addressOffset);     //take the len value
 
@@ -47,23 +40,10 @@ String readFromEEPROM(int addressOffset) {  //give the string at the indicate ad
   for (int pos = 0; pos < len; pos++) {
     name[pos] = char(EEPROM.read(begin + pos));
   }
- name[len+1] = '\0';
-  String namePlayer = name;
-  Serial.println(namePlayer.length());
 
+  String namePlayer = name;
 
   return namePlayer;
-//return (String)name;
-
-// if ( !malloc(5) )
-//     Serial.println("N-avem heap");
-// else
-//    Serial.println(" E ok");
-// char* cstr = "xxxx";
-// String str = cstr;
-// Serial.println(str.length());
-// return str;
-
 }
 void updateHighScoreEEPROM(int points) {
   EEPROM.update(8, EEPROM.read(7));
@@ -102,7 +82,8 @@ void initialize() {
   EEPROM.update(0,0);
   EEPROM.update(1,0);
   EEPROM.update(2,0);
-  EEPROM.update(3,0);
+  EEPROM.update(3,1); //sound on
+  EEPROM.update(34,0);
 
   //scores
   EEPROM.update(4,0);
@@ -119,33 +100,33 @@ void initialize() {
   EEPROM.update(13, 4);
 
   //1 player
-  EEPROM.update(14, 'N');   //mereu au cate 4 caractere
-  EEPROM.update(15, 'N');  //mereu au cate 4 caractere
-  EEPROM.update(16, 'N');  //mereu au cate 4 caractere
+  EEPROM.update(14, 'N');   
+  EEPROM.update(15, 'N');    
+  EEPROM.update(16, 'N');  
   EEPROM.update(17, 'N');
 
   //2 player
-  EEPROM.update(18, 'N');   //mereu au cate 4 caractere
-  EEPROM.update(19, 'N');  //mereu au cate 4 caractere
-  EEPROM.update(20, 'N');  //mereu au cate 4 caractere
+  EEPROM.update(18, 'N');   
+  EEPROM.update(19, 'N');  
+  EEPROM.update(20, 'N');  
   EEPROM.update(21, 'N');
 
   //3 player
-  EEPROM.update(22, 'N');   //mereu au cate 4 caractere
-  EEPROM.update(23, 'N');  //mereu au cate 4 caractere
-  EEPROM.update(24, 'N');  //mereu au cate 4 caractere
+  EEPROM.update(22, 'N');   
+  EEPROM.update(23, 'N');  
+  EEPROM.update(24, 'N');  
   EEPROM.update(25, 'N');
 
   //4 player
-  EEPROM.update(26, 'N');   //mereu au cate 4 caractere
-  EEPROM.update(27, 'N');  //mereu au cate 4 caractere
-  EEPROM.update(28, 'N');  //mereu au cate 4 caractere
+  EEPROM.update(26, 'N');  
+  EEPROM.update(27, 'N');  
+  EEPROM.update(28, 'N'); 
   EEPROM.update(29, 'N');
 
   //5 player
-  EEPROM.update(30, 'N');   //mereu au cate 4 caractere
-  EEPROM.update(31, 'N');  //mereu au cate 4 caractere
-  EEPROM.update(32, 'N');  //mereu au cate 4 caractere
+  EEPROM.update(30, 'N');   
+  EEPROM.update(31, 'N');  
+  EEPROM.update(32, 'N');  
   EEPROM.update(33, 'N');
 
 }

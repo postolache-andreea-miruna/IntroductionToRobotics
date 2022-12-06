@@ -1,5 +1,6 @@
 #include "drawMatrix.h"
 #include "EEPROMMemo.h"
+#include "buzzer.h"
 #include "joystickMoves.h"
 #include "lcdComands.h"
 #include "settingsMenu.h"
@@ -9,7 +10,7 @@
 #include "gameLogic.h"
 
 void setup() {
- initialize();
+  initialize();
 
   byte sounds = EEPROM.read(3);
   pinMode(pinSw, INPUT_PULLUP);
@@ -25,7 +26,6 @@ void setup() {
   difficultyPosition = EEPROM.read(34);
   brightnessMatrixPosition = EEPROM.read(2);
 
-//joystick
 //lcd
   pinMode(contrastPin, OUTPUT);
   pinMode(brightPin, OUTPUT);
@@ -35,13 +35,14 @@ void setup() {
   lcd.setCursor(0, 0);
   
   lcd.createChar(0, heart);
-  lcd.createChar(1, sadFace);
+  //lcd.createChar(1, sadFace);
   lcd.createChar(2, smiley);
   lcd.createChar(3, doubleArrows);
   lcd.createChar(4, downArrow);
   lcd.createChar(5, upArrow);
   lcd.createChar(6,buttonPress);
 //stop lcd
+
 //matrix
   lc.shutdown(0, false);                 // turn off power saving, enables display
   lc.setIntensity(0, matrixBrightnessValue[brightnessMatrixPosition]);  // sets brightness (0~15 possible values)
@@ -50,14 +51,13 @@ void setup() {
   analogWrite(contrastPin, lcdContrastValue[contrastPosition]);
 //stopMatrix
 
-//stopjoystick
   greeting();
   menuPart();
   Serial.begin(9600);
 }
 
 void loop() {
+  Serial.println(yValue);
   gameStates();
-  //Serial.println(settingPartPosition);
 
 }

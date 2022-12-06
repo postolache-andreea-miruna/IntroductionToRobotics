@@ -37,7 +37,6 @@ byte matrix[matrixSize][matrixSize] = {
   { 0, 0, 0, 0, 0, 0, 0, 0 }
 };
 
-
 void updateMatrix() {
   for (int row = 0; row < matrixSize; row++) {
     for (int col = 0; col < matrixSize; col++) {
@@ -45,7 +44,6 @@ void updateMatrix() {
     }
   }
 }
-
 
 void foodBlink() {
   matrix[currentPosX][currentPosY] = !matrix[currentPosX][currentPosY];
@@ -80,30 +78,34 @@ void updatePositions() {
   if (joystickDown()) {
     if (xPos < matrixSize - 1) {
       xPos++;
-    } else {
+    } 
+    else 
       xPos = 0;
-    }
+    
   }
   if (joystickUp()) {
     if (xPos > 0) {
       xPos--;
-    } else {
+    } 
+    else 
       xPos = matrixSize - 1;
-    }
+    
   }
   if (joystickRight()) {
     if (yPos < matrixSize - 1) {
       yPos++;
-    } else {
+    } 
+    else 
       yPos = 0;
-    }
+    
   }
   if (joystickLeft()) {
     if (yPos > 0) {
       yPos--;
-    } else {
+    } 
+    else 
       yPos = matrixSize - 1;
-    }
+    
   }
   if (xPos != xLastPos || yPos != yLastPos) {
     matrixChanged = true;
@@ -111,37 +113,33 @@ void updatePositions() {
     matrix[xPos][yPos] = 1;
   }
 }
-void setupGame()
-{if (millis() - lastMoved > moveInterval) {
-  // game logic
-  updatePositions();
-  lastMoved = millis();
-}
-
-if (millis() - lastBlink > blinkInterval) {
-  // game logic
-  foodBlink();
-  lastBlink = millis();
-}
-
-if (currentPosX == xPos && currentPosY == yPos) {
-  
-  if (score == 10) {
-    //////////////////////////////
-    congratsScreen(score);                               //congrats screen
+void setupGame() {
+  if (millis() - lastMoved > moveInterval) {
+    // game logic
+    updatePositions();
+    lastMoved = millis();
   }
-  else {
-  score++;
-  scorePrint(score);
-  generateFood();
-  }
- // Serial.println(score);
- 
-}
 
-if (matrixChanged == true) {
-  // matrix display logi
-  updateMatrix();
-  matrixChanged = false;
-}}
+  if (millis() - lastBlink > blinkInterval) {
+    // game logic
+    foodBlink();
+    lastBlink = millis();
+  }
+
+  if (currentPosX == xPos && currentPosY == yPos) {
+    score++;
+    scorePrint(score);
+    generateFood();
+  }
+
+  if (score == 4) {
+    congratsScreen(score);  //congrats screen
+  }
+
+  if (matrixChanged == true) {
+    // matrix display logi
+    updateMatrix();
+    matrixChanged = false;
+  }
+}
 
