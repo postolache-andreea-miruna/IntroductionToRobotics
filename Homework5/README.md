@@ -76,6 +76,7 @@ How to connest Driver to Arduino
 
 
 ## Let's see how it works
-[CompleteSnakeMenu12/07] (https://youtu.be/dwG_YwjKPK4)
+
+[Complete Snake Menu 12/07](https://youtu.be/dwG_YwjKPK4)
 
 
