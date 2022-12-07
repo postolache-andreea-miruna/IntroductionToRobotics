@@ -53,6 +53,17 @@ Used components:
 
 ## 🔌 Setup
 
+Setup view 
+
+1.
+
+<img src="https://github.com/postolache-andreea-miruna/IntroductionToRobotics/blob/af8fba5e94bc9d2ec765a5f1c4f0a9c522d26785/Homework5/setup1up.jpg" width=50% height=50%>
+
+2.
+
+<img src="https://github.com/postolache-andreea-miruna/IntroductionToRobotics/blob/af8fba5e94bc9d2ec765a5f1c4f0a9c522d26785/Homework5/setup2side.jpg" width=50% height=50%>
+
+
 Common Cathod
 
 <img src="https://github.com/postolache-andreea-miruna/IntroductionToRobotics/blob/a9754a096874029d0d95e6474ce6ebd501884944/Matrix/commonCathod.png" width=50% height=50%>
