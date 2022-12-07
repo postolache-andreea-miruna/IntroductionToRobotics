@@ -2,10 +2,10 @@
 const byte RS = 13;
 const byte enable = 8;
 const byte d4 = 7;
-const byte d5 = 6;
+const byte d5 = 3;  // initial 6
 const byte d6 = 5; 
 const byte d7 = 4;
-const byte brightPin = 3; //lcdA is conected with arduino pin 3  
+const byte brightPin = 6; //lcdA is conected with arduino pin 3  
 const byte contrastPin = 9;
 const byte rowsLCD = 2;
 const byte columnsLCD = 16;

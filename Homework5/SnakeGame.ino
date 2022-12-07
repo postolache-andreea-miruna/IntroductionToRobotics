@@ -11,7 +11,7 @@
 
 
 void setup() {
-  initialize();
+ //initialize();
 
   byte sounds = EEPROM.read(3);
   pinMode(pinSw, INPUT_PULLUP);
