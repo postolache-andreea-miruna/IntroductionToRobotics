@@ -76,10 +76,6 @@ How to connest Driver to Arduino
 
 
 ## Let's see how it works
+[Complete Snake Menu - 12/07] (https://youtu.be/dwG_YwjKPK4)
 
-[PressButton](https://youtu.be/E6J_nwC0ed4)
-
-[SoundMenu](https://youtu.be/F0l4sjWPeLg)
-
-[SnakeWithoutSoundOnMenuAndPressButton](https://youtu.be/pWVBoIshcwA)
 
