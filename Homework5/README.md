@@ -74,6 +74,10 @@ How to connest Driver to Arduino
 <img src="https://github.com/postolache-andreea-miruna/IntroductionToRobotics/blob/a9754a096874029d0d95e6474ce6ebd501884944/Matrix/DriverArduino.png" width=50% height=50%>
 
 
+How to connect LCD to Arduino
+
+<img src="https://github.com/postolache-andreea-miruna/IntroductionToRobotics/blob/306fd6581a411fb0410732c41ad6df798d0b594d/Homework5/lcdconect.png" width=50% height=50%>
+
 
 ## Let's see how it works
 
