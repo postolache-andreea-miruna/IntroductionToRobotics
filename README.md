@@ -13,6 +13,7 @@ Programs in Arduino  written for Unibuc FMI course: Introduction to robotics.
 
 ## [⭐ Homework 5 ⭐](https://github.com/postolache-andreea-miruna/IntroductionToRobotics/tree/main/Homework5)
 
+## [Snake Project](https://github.com/postolache-andreea-miruna/SnakeGameRobotics.git)
 
 ### When possible, follow the wires color scheme:
 
